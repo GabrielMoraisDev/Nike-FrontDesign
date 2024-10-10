@@ -16,7 +16,7 @@
 
 body {
   color: var(--foreground);
-  background: #fff;
+  background: #171b31;
   overflow: hidden;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -27,83 +27,23 @@ body {
   }
 }
 
-.bg-1{
-  background-image:  linear-gradient(to right, #2b8554, #042516);
+.bg-g{
+  background-image:  linear-gradient(to right, #000000, #00000062);
 }
-
-.bg-2{
-  background-image:  linear-gradient(to right, #852b76, #25041a);
-}
-
-.bg-3{
-  background-image:  linear-gradient(to right, #85662b, #251b04);
-}
-
-.bg-4{
-  background-image:  linear-gradient(to right, #312b85, #060425);
-}
-
-.bg-5{
-  background-image:  linear-gradient(to right, #2b8554, #042516);
-}
-
-.bg-6{
-  background-image:  linear-gradient(to right, #852b2b, #740f0f);
-}
-
-.bg-7{
-  background-image:  linear-gradient(to right, #1a1a1a, #121314);
-}
-
 
 .ani1{
-  animation: ani1 12s infinite ease-in-out;
+  animation: ani 5s infinite ease-in-out;
 }
 .ani2{
-  animation: ani2 12s infinite ease-in-out;
-}
-.ani3{
-  animation: ani3 12s infinite ease-in-out;
-}
-.ani4{
-  animation: ani4 12s infinite ease-in-out;
+  animation: ani 5s infinite ease-in-out;
+  animation-delay: 900ms;
 }
 
-@keyframes ani1 {
+@keyframes ani {
   0%{
     margin-top: 0rem;
   }
-  20%{
-    margin-top: 2rem;
-  }
-  40%{
-    margin-top: -1rem;
-  }
-  60%{
-    margin-top: 2rem;
-  }
-  80%{
-    margin-top: -1rem;
-  }
-  100%{
-    margin-top: 0rem;
-  }
-}
-
-@keyframes ani2 {
-  0%{
-    margin-top: 0rem;
-  }
-  20%{
-    margin-top: -2rem;
-  }
-  40%{
-    margin-top: 1rem;
-  }
-  60%{
-    margin-top: 0rem;
-  }
-  80%{
+  50%{
     margin-top: 2rem;
   }
   100%{
@@ -111,44 +51,37 @@ body {
   }
 }
 
-@keyframes ani3 {
+.rot1{
+  animation: rot1 5s infinite ease-in-out;
+  transform: rotate(0);
+}
+
+.rot2{
+  animation: rot2 5s infinite ease-in-out;
+  animation-delay: 1500ms;
+  transform: rotate(20);
+}
+
+@keyframes rot1 {
   0%{
-    margin-top: -1rem;
+    transform: rotate(0deg);
   }
-  20%{
-    margin-top: 2rem;
-  }
-  40%{
-    margin-top: 0rem;
-  }
-  60%{
-    margin-top: -1rem;
-  }
-  80%{
-    margin-top: 0rem;
+  50%{
+    transform: rotate(-10deg);
   }
   100%{
-    margin-top: -1rem;
+    transform: rotate(0deg);
   }
 }
 
-@keyframes ani4 {
+@keyframes rot2 {
   0%{
-    margin-top: 2rem;
+    transform: rotate(20deg);
   }
-  20%{
-    margin-top: 1rem;
-  }
-  40%{
-    margin-top: -1rem;
-  }
-  60%{
-    margin-top: 0rem;
-  }
-  80%{
-    margin-top: -1rem;
+  50%{
+    transform: rotate(30deg);
   }
   100%{
-    margin-top: 2rem;
+    transform: rotate(20deg);
   }
 }
