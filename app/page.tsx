@@ -110,12 +110,20 @@ export default function Home() {
         />
 
         <Image 
-          src='/img/evelopshoe.png' 
+          src='/img/snapshoe.png' 
           alt="Imagem de fundo" 
           width={1000} 
           height={1000} 
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full z-50"
         />
+
+        {/* <Image 
+          src='/img/evelopshoe.png' 
+          alt="Imagem de fundo" 
+          width={1000} 
+          height={1000} 
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full z-50"
+        /> */}
 
         <Image 
           src='/img/checkshoe.png' 
