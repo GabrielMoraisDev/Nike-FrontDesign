@@ -17,8 +17,13 @@
 body {
   color: var(--foreground);
   background: #171b31;
-  overflow: hidden;
+  overflow: hidden; /* Impede rolagem em desktops */
   font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+  height: 100%; /* Garante que o body preencha a altura completa da viewport */
+  overflow: hidden; /* Impede rolagem em qualquer dispositivo */
 }
 
 @layer utilities {
@@ -27,61 +32,62 @@ body {
   }
 }
 
-.bg-g{
-  background-image:  linear-gradient(to right, #000000, #00000062);
+.bg-g {
+  background-image: linear-gradient(to right, #000000, #00000062);
 }
 
-.ani1{
+.ani1 {
   animation: ani 5s infinite ease-in-out;
 }
-.ani2{
+
+.ani2 {
   animation: ani 5s infinite ease-in-out;
   animation-delay: 900ms;
 }
 
 @keyframes ani {
-  0%{
+  0% {
     margin-top: 0rem;
   }
-  50%{
+  50% {
     margin-top: 2rem;
   }
-  100%{
+  100% {
     margin-top: 0rem;
   }
 }
 
-.rot1{
+.rot1 {
   animation: rot1 5s infinite ease-in-out;
   transform: rotate(0);
 }
 
-.rot2{
+.rot2 {
   animation: rot2 5s infinite ease-in-out;
   animation-delay: 1500ms;
   transform: rotate(20);
 }
 
 @keyframes rot1 {
-  0%{
+  0% {
     transform: rotate(0deg);
   }
-  50%{
+  50% {
     transform: rotate(-10deg);
   }
-  100%{
+  100% {
     transform: rotate(0deg);
   }
 }
 
 @keyframes rot2 {
-  0%{
+  0% {
     transform: rotate(20deg);
   }
-  50%{
+  50% {
     transform: rotate(30deg);
   }
-  100%{
+  100% {
     transform: rotate(20deg);
   }
 }

@@ -49,9 +49,10 @@ export default function Home() {
   }, [color]); // Recarrega o SVG sempre que a cor muda
 
   return (
-    <div className="w-full h-screen flex justify-center items-center" style={{ backgroundColor: color }}>
+    <div className="w-full h-screen flex justify-center items-center overflow-hidden" style={{ backgroundColor: color }}>
 
       <div className="w-auto h-5 absolute top-5 right-5 z-50">
+        <div className="flex md:inline">
         <div className="inline">
           <p className="text-sm text-center mt-3">BASE</p>
           <div className="flex cursor-pointer justify-center">
@@ -83,7 +84,9 @@ export default function Home() {
             <div className={`bg-black border-4 ${darktamp?'border-sky-700':'border-slate-600'} duration-300 rounded-full w-8 h-8 mx-1`} onClick={()=>setDarktamp(true)}></div>
           </div>
         </div>
+        </div>
 
+      <div className="flex md:inline">
         <div className="inline">
           <p className="text-sm text-center mt-3">TRASEIRA</p>
           <div className="flex cursor-pointer justify-center">
@@ -115,7 +118,9 @@ export default function Home() {
             <div className={`bg-black border-4 ${darkcheck?'border-sky-700':'border-slate-600'} duration-300 rounded-full w-8 h-8 mx-1`} onClick={()=>setDarkcheck(true)}></div>
           </div>
         </div>
+      </div>
 
+      <div className="flex md:inline">
         <div className="inline">
           <p className="text-sm text-center mt-3">CADARÇO</p>
           <div className="flex cursor-pointer justify-center">
@@ -131,6 +136,7 @@ export default function Home() {
             <div className={`bg-black border-4 ${darkevelop?'border-sky-700':'border-slate-600'} duration-300 rounded-full w-8 h-8 mx-1`} onClick={()=>setDarkevelop(true)}></div>
           </div>
         </div>
+      </div>
       </div>
 
         <label htmlFor="colorPicker" className="absolute top-5 left-5 text-white z-50 flex" onClick={()=> setLogoclick(true)}>
@@ -154,9 +160,9 @@ export default function Home() {
       <div className="bg-g w-full h-screen absolute z-10 opacity-75"></div>
 
     {/* Tenis 1 */}
-      <div className={`w-[50rem] h-[50rem] absolute z-40 mt-10 ml-10 rot1 duration-1000 ${show?'ml-10 opacity-100':'ml-0 opacity-0'}`}>
+      <div className={`mt-[8rem] ml-[2rem] w-[60vw] h-[60vw] md:w-[60vw] md:h-[60vw] absolute z-40 md:mt-10 md:ml-10 rot1 duration-1000 ${show?'ml-10 opacity-100':'ml-0 opacity-0'}`}>
         <div className="ani1 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full">
-        <div className="svg-container w-[93.8%] h-[93.8%] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 absolute z-20" dangerouslySetInnerHTML={{ __html: svgContent }} />
+        <div className="svg-container w-[105%] h-[100%] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 absolute z-20" dangerouslySetInnerHTML={{ __html: svgContent }} />
         <Image src='/img/nikerOver.png' alt="Imagem de fundo" width={1000} height={1000} className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full z-30 opacity-40"/>
         <Image src='/img/nikertampblack.png' alt="Imagem de fundo" width={1000} height={1000} className={`absolute duration-300 ${darktamp?'opacity-100':'opacity-0'} top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full z-50`}/>
         <Image src='/img/nikertampwhite.png' alt="Imagem de fundo" width={1000} height={1000} className={`absolute duration-300 ${!darktamp?'opacity-100':'opacity-0'} top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full z-50`}/>
@@ -175,16 +181,28 @@ export default function Home() {
       </div>
 
     {/* Tenis 2 */}
-      <div className={`w-[50rem] h-[50rem] absolute z-30 mt-[-8rem] ml-[-15rem] rot2 rotate-[20deg] duration-1000 ${show?'ml-[-15rem] opacity-100':'ml-0 opacity-0'}`}>
+      <div className={`mt-[8rem] ml-[2rem] w-[60vw] h-[60vw] md:w-[60vw] md:h-[60vw] absolute z-30 md:mt-[-8rem] md:ml-[-15rem] rot2 rotate-[20deg] duration-1000 ${show?'ml-[-15rem] opacity-100':'ml-0 opacity-0'}`}>
       <div className="ani2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full">
+      <div className="svg-container w-[105%] h-[100%] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 absolute z-20" dangerouslySetInnerHTML={{ __html: svgContent }} />
         <Image src='/img/nikerOver.png' alt="Imagem de fundo" width={1000} height={1000} className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full z-30 opacity-40"/>
-        <div className="svg-container w-[93.8%] h-[93.8%] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 absolute z-20" dangerouslySetInnerHTML={{ __html: svgContent }} />
-      <Image src='/img/nikerBase.png' alt="Imagem de fundo" width={1000} height={1000} className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full z-10"/>
+        <Image src='/img/nikertampblack.png' alt="Imagem de fundo" width={1000} height={1000} className={`absolute duration-300 ${darktamp?'opacity-100':'opacity-0'} top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full z-50`}/>
+        <Image src='/img/nikertampwhite.png' alt="Imagem de fundo" width={1000} height={1000} className={`absolute duration-300 ${!darktamp?'opacity-100':'opacity-0'} top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full z-50`}/>
+        <Image src='/img/nikerBase.png' alt="Imagem de fundo" width={1000} height={1000} className={`absolute duration-300 ${!darkbase?'opacity-100':'opacity-0'} top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full z-10`}/>
+        <Image src='/img/nikerBaseDark.png' alt="Imagem de fundo" width={1000} height={1000} className={`absolute duration-300 ${darkbase?'opacity-100':'opacity-0'} top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full z-10`}/>
+        <Image src='/img/frontshoe.png' alt="Imagem de fundo" width={1000} height={1000} className={`absolute duration-300 ${darkfront?'opacity-100':'opacity-0'} top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full z-50`}/>
+        <Image src='/img/backshoe.png' alt="Imagem de fundo" width={1000} height={1000} className={`absolute duration-300 ${darkback?'opacity-100':'opacity-0'} top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full z-50`}/>
+        <Image src='/img/undershoe.png' alt="Imagem de fundo" width={1000} height={1000} className={`absolute duration-300 ${darkunder?'opacity-100':'opacity-0'} top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full z-50`}/>
+        <Image src='/img/snapshoe.png' alt="Imagem de fundo" width={1000} height={1000} className={`absolute duration-300 ${darknap?'opacity-100':'opacity-0'} top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full z-50`}/>
+        <Image src='/img/markblack.png' alt="Imagem de fundo" width={1000} height={1000} className={`absolute duration-300 ${darkmark?'opacity-100':'opacity-0'} top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full z-50`}/>
+        <Image src='/img/markwhite.png' alt="Imagem de fundo" width={1000} height={1000} className={`absolute duration-300 ${!darkmark?'opacity-100':'opacity-0'} top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full z-50`}/>
+        <Image src='/img/evelopshoe.png' alt="Imagem de fundo" width={1000} height={1000} className={`absolute duration-300 ${darkevelop?'opacity-100':'opacity-0'} top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full z-50`}/>
+        <Image src='/img/checkshoe.png' alt="Imagem de fundo" width={1000} height={1000} className={`absolute duration-300 ${darkcheck?'opacity-100':'opacity-0'} top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full z-50`}/>
+        <Image src='/img/cadar.png' alt="Imagem de fundo" width={1000} height={1000} className={`absolute duration-300 ${darkcadar?'opacity-100':'opacity-0'} top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full z-50`}/>
         </div>
       </div>
 
     {/* Nike escrito no background */}
-      <Image src='/img/bg-logo.png' alt="Imagem de fundo" width={1000} height={1000} className="absolute w-auto h-full z-10 animate-fade-left"/>
+      <Image src='/img/bg-logo.png' alt="Imagem de fundo" width={1000} height={1000} className="absolute w-full md:w-[80%] h-auto z-10 animate-fade-left"/>
 
     </div>
   );
