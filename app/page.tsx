@@ -40,7 +40,7 @@ export default function Home() {
 
   // Função para carregar o SVG e atualizar sua cor
   useEffect(() => {
-    fetch('/img/nikecolor2.svg')
+    fetch('/img/nikecolor.svg')
       .then((response) => response.text())
       .then((svg) => {
         const updatedSvg = changeSvgColor(svg, color);
@@ -51,10 +51,10 @@ export default function Home() {
   return (
     <div className="w-full h-screen flex justify-center items-center overflow-hidden" style={{ backgroundColor: color }}>
 
-      <div className="w-auto h-5 absolute top-5 right-5 z-50">
+      <div className="w-auto h-[18rem] ml-5 md:h-5 absolute bottom-0 md:top-5 right-5 z-50">
         <div className="flex md:inline">
         <div className="inline">
-          <p className="text-sm text-center mt-3">BASE</p>
+          <p className="text-sm text-center mt-3">BASE INICIAL</p>
           <div className="flex cursor-pointer justify-center">
             <div className={`bg-white border-4 ${!darkbase?'border-sky-700':'border-slate-600'} duration-300 rounded-full w-8 h-8 mx-1`} onClick={()=>setDarkbase(false)}></div>
             <div className={`bg-black border-4 ${darkbase?'border-sky-700':'border-slate-600'} duration-300 rounded-full w-8 h-8 mx-1`} onClick={()=>setDarkbase(true)}></div>
@@ -62,17 +62,17 @@ export default function Home() {
         </div>
 
         <div className="inline">
-          <p className="text-sm text-center mt-3">SOLA</p>
+          <p className="text-sm text-center mt-3">COR DA SOLA</p>
           <div className="flex cursor-pointer justify-center">
-            <div className={`bg-slate-400 border-4 ${!darkunder?'border-sky-700':'border-slate-600'} duration-300 rounded-full w-8 h-8 mx-1`} onClick={()=>setDarkunder(false)}></div>
+            <div className={`border-4 ${!darkunder?'border-sky-700':'border-slate-600'} duration-300 rounded-full w-8 h-8 mx-1`} onClick={()=>setDarkunder(false)} style={{ backgroundColor: color }}></div>
             <div className={`bg-black border-4 ${darkunder?'border-sky-700':'border-slate-600'} duration-300 rounded-full w-8 h-8 mx-1`} onClick={()=>setDarkunder(true)}></div>
           </div>
         </div> 
 
         <div className="inline">
-          <p className="text-sm text-center mt-3">FRONTAL</p>
+          <p className="text-sm text-center mt-3">PARTE FRONTAL</p>
           <div className="flex cursor-pointer justify-center">
-            <div className={`bg-slate-400 border-4 ${!darkfront?'border-sky-700':'border-slate-600'} duration-300 rounded-full w-8 h-8 mx-1`} onClick={()=>setDarkfront(false)}></div>
+            <div className={`border-4 ${!darkfront?'border-sky-700':'border-slate-600'} duration-300 rounded-full w-8 h-8 mx-1`} onClick={()=>setDarkfront(false)} style={{ backgroundColor: color }}></div>
             <div className={`bg-black border-4 ${darkfront?'border-sky-700':'border-slate-600'} duration-300 rounded-full w-8 h-8 mx-1`} onClick={()=>setDarkfront(true)}></div>
           </div>
         </div>
@@ -88,23 +88,23 @@ export default function Home() {
 
       <div className="flex md:inline">
         <div className="inline">
-          <p className="text-sm text-center mt-3">TRASEIRA</p>
+          <p className="text-sm text-center mt-3">TRASEIRA INFERIOR</p>
           <div className="flex cursor-pointer justify-center">
-            <div className={`bg-slate-400 border-4 ${!darkback?'border-sky-700':'border-slate-600'} duration-300 rounded-full w-8 h-8 mx-1`} onClick={()=>setlDarkback(false)}></div>
+            <div className={`border-4 ${!darkback?'border-sky-700':'border-slate-600'} duration-300 rounded-full w-8 h-8 mx-1`} onClick={()=>setlDarkback(false)} style={{ backgroundColor: color }}></div>
             <div className={`bg-black border-4 ${darkback?'border-sky-700':'border-slate-600'} duration-300 rounded-full w-8 h-8 mx-1`} onClick={()=>setlDarkback(true)}></div>
           </div>
         </div>
 
         <div className="inline">
-          <p className="text-sm text-center mt-3">SUPERIOR TRASEIRA</p>
+          <p className="text-sm text-center mt-3">TRASEIRA SUPERIOR</p>
           <div className="flex cursor-pointer justify-center">
-            <div className={`bg-slate-400 border-4 ${!darknap?'border-sky-700':'border-slate-600'} duration-300 rounded-full w-8 h-8 mx-1`} onClick={()=>setDarknap(false)}></div>
+            <div className={`border-4 ${!darknap?'border-sky-700':'border-slate-600'} duration-300 rounded-full w-8 h-8 mx-1`} onClick={()=>setDarknap(false)} style={{ backgroundColor: color }}></div>
             <div className={`bg-black border-4 ${darknap?'border-sky-700':'border-slate-600'} duration-300 rounded-full w-8 h-8 mx-1`} onClick={()=>setDarknap(true)}></div>
           </div>
         </div>
 
         <div className="inline">
-          <p className="text-sm text-center mt-3">MARCA</p>
+          <p className="text-sm text-center mt-3">MARCA AIR JORDAN</p>
           <div className="flex cursor-pointer justify-center">
             <div className={`bg-white border-4 ${!darkmark?'border-sky-700':'border-slate-600'} duration-300 rounded-full w-8 h-8 mx-1`} onClick={()=>setDarkmark(false)}></div>
             <div className={`bg-black border-4 ${darkmark?'border-sky-700':'border-slate-600'} duration-300 rounded-full w-8 h-8 mx-1`} onClick={()=>setDarkmark(true)}></div>
@@ -112,27 +112,27 @@ export default function Home() {
         </div>
 
         <div className="inline">
-          <p className="text-sm text-center mt-3">LOGOTIPO</p>
+          <p className="text-sm text-center mt-3">LOGOTIPO NIKE</p>
           <div className="flex cursor-pointer justify-center">
-            <div className={`bg-slate-400 border-4 ${!darkcheck?'border-sky-700':'border-slate-600'} duration-300 rounded-full w-8 h-8 mx-1`} onClick={()=>setDarkcheck(false)}></div>
+            <div className={`border-4 ${!darkcheck?'border-sky-700':'border-slate-600'} duration-300 rounded-full w-8 h-8 mx-1`} onClick={()=>setDarkcheck(false)} style={{ backgroundColor: color }}></div>
             <div className={`bg-black border-4 ${darkcheck?'border-sky-700':'border-slate-600'} duration-300 rounded-full w-8 h-8 mx-1`} onClick={()=>setDarkcheck(true)}></div>
           </div>
         </div>
       </div>
 
-      <div className="flex md:inline">
+      <div className="flex md:inline m-auto justify-center">
         <div className="inline">
           <p className="text-sm text-center mt-3">CADARÇO</p>
           <div className="flex cursor-pointer justify-center">
-            <div className={`bg-slate-400 border-4 ${!darkcadar?'border-sky-700':'border-slate-600'} duration-300 rounded-full w-8 h-8 mx-1`} onClick={()=>setDarkcadar(false)}></div>
+            <div className={`border-4 ${!darkcadar?'border-sky-700':'border-slate-600'} duration-300 rounded-full w-8 h-8 mx-1`} onClick={()=>setDarkcadar(false)} style={{ backgroundColor: color }}></div>
             <div className={`bg-black border-4 ${darkcadar?'border-sky-700':'border-slate-600'} duration-300 rounded-full w-8 h-8 mx-1`} onClick={()=>setDarkcadar(true)}></div>
           </div>
         </div>
 
         <div className="inline">
-          <p className="text-sm text-center mt-3">SUPERIOR</p>
+          <p className="text-sm text-center mt-3">PARTE SUPERIOR</p>
           <div className="flex cursor-pointer justify-center">
-            <div className={`bg-slate-400 border-4 ${!darkevelop?'border-sky-700':'border-slate-600'} duration-300 rounded-full w-8 h-8 mx-1`} onClick={()=>setDarkevelop(false)}></div>
+            <div className={`border-4 ${!darkevelop?'border-sky-700':'border-slate-600'} duration-300 rounded-full w-8 h-8 mx-1`} onClick={()=>setDarkevelop(false)} style={{ backgroundColor: color }}></div>
             <div className={`bg-black border-4 ${darkevelop?'border-sky-700':'border-slate-600'} duration-300 rounded-full w-8 h-8 mx-1`} onClick={()=>setDarkevelop(true)}></div>
           </div>
         </div>
@@ -160,7 +160,7 @@ export default function Home() {
       <div className="bg-g w-full h-screen absolute z-10 opacity-75"></div>
 
     {/* Tenis 1 */}
-      <div className={`mt-[8rem] ml-[2rem] w-[60vw] h-[60vw] md:w-[60vw] md:h-[60vw] absolute z-40 md:mt-10 md:ml-10 rot1 duration-1000 ${show?'ml-10 opacity-100':'ml-0 opacity-0'}`}>
+      <div className={`mt-[-17rem] ml-[2rem] w-[60vw] h-[60vw] md:w-[40vw] md:h-[40vw] absolute z-40 md:mt-10 md:ml-10 rot1 duration-1000 ${show?'ml-10 opacity-100':'ml-0 opacity-0'}`}>
         <div className="ani1 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full">
         <div className="svg-container w-[105%] h-[100%] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 absolute z-20" dangerouslySetInnerHTML={{ __html: svgContent }} />
         <Image src='/img/nikerOver.png' alt="Imagem de fundo" width={1000} height={1000} className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full z-30 opacity-40"/>
@@ -181,7 +181,7 @@ export default function Home() {
       </div>
 
     {/* Tenis 2 */}
-      <div className={`mt-[8rem] ml-[2rem] w-[60vw] h-[60vw] md:w-[60vw] md:h-[60vw] absolute z-30 md:mt-[-8rem] md:ml-[-15rem] rot2 rotate-[20deg] duration-1000 ${show?'ml-[-15rem] opacity-100':'ml-0 opacity-0'}`}>
+      <div className={`mt-[-22rem] ml-[-3rem] w-[60vw] h-[60vw] md:w-[40vw] md:h-[40vw] absolute z-30 md:mt-[-8rem] md:ml-[-15rem] rot2 rotate-[20deg] duration-1000 ${show?'ml-[-15rem] opacity-100':'ml-0 opacity-0'}`}>
       <div className="ani2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full">
       <div className="svg-container w-[105%] h-[100%] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 absolute z-20" dangerouslySetInnerHTML={{ __html: svgContent }} />
         <Image src='/img/nikerOver.png' alt="Imagem de fundo" width={1000} height={1000} className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full z-30 opacity-40"/>
@@ -202,7 +202,7 @@ export default function Home() {
       </div>
 
     {/* Nike escrito no background */}
-      <Image src='/img/bg-logo.png' alt="Imagem de fundo" width={1000} height={1000} className="absolute w-full md:w-[80%] h-auto z-10 animate-fade-left"/>
+      <Image src='/img/bg-logo.png' alt="Imagem de fundo" width={1000} height={1000} className="absolute mt-[-18rem] md:mt-0 w-full md:w-[80%] h-auto z-10 animate-fade-left"/>
 
     </div>
   );
